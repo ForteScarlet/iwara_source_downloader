@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Iwara Source Downloader",
-  "version": "1.2.3",
+  "version": "1.2.4",
 
   "description": "Iwara Source Downloader",
 
@@ -12,7 +12,8 @@
 
   "permissions": [
     "tabs",
-    "downloads"
+    "downloads",
+    "storage"
   ],
 
   "page_action": {
@@ -29,6 +30,10 @@
       "matches": ["*://*.iwara.tv/videos/*"],
       "js": ["content_scripts/down.js"]
     }
-  ]
+  ],
+
+  "options_ui": {
+    "page": "options/options.html"
+  }
 
 }

@@ -11,23 +11,41 @@ down.jsから動画情報を受け取ってダウンロードを開始する
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
 
-    function onStartedDownload(id) {
-      //console.log("Started to download: "+id);
-    }
+    const setting = browser.storage.local.get();
+    setting.then((settings)=>{
 
-    function onFailed(error) {
-      //console.log("Something stinks: "+error);
-    }
+      var filename = request.username + ' - ' + request.title + '.mp4';
+      if (typeof settings.filename !== "undefined") {
+        if(settings.filename.indexOf("type1") != -1){
+          filename = request.username + ' - ' + request.title + '.mp4';
+        } else {
+          filename = '['+request.username+'] ' + request.title + '.mp4';
+        }
+      }
 
-    var startDownload = browser.downloads.download({
-      url : request.source_url,
-      filename: request.username + ' - ' + request.title + '.mp4',
-      conflictAction : 'uniquify',
-      saveAs : true
-    });
+      function onStartedDownload(id) {
+        //console.log("Started to download: "+id);
+      }
 
-    startDownload.then(onStartedDownload, onFailed);
+      function onFailed(error) {
+        //console.log("Something stinks: "+error);
+      }
+
+      var startDownload = browser.downloads.download({
+        url : request.source_url,
+        filename: filename,
+        conflictAction : 'uniquify',
+        saveAs : true
+      });
+
+      startDownload.then(onStartedDownload, onFailed);
+    }, onError);
 });
+
+/* エラーログ */
+function onError(e) {
+  console.error(e);
+}
 
 /*
 タブのURLにiwara.tv/videos/があればアイコンを表示

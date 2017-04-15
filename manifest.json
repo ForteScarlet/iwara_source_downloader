@@ -6,6 +6,12 @@
 
   "description": "Iwara Source Downloader",
 
+  "applications": {
+    "gecko": {
+      "id": "mmd@iwara.source.downloader"
+    }
+  },
+
   "icons": {
     "48": "icons/icon-48.png"
   },

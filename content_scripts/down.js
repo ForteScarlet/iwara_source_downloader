@@ -30,7 +30,7 @@ chrome.runtime.onMessage.addListener(getInfo);
 ¥　/　:　*　?　"　<　>　|
 */
 function convertSafeFileName(titleOrUsername){
-  var safeStr = titleOrUsername
+  return unEscapeHTML(titleOrUsername)
     .replace(/\\/g,'￥')
     .replace(/\//g,'／')
     .replace(/:/g,'：')
@@ -39,5 +39,18 @@ function convertSafeFileName(titleOrUsername){
     .replace(/</g,'＜')
     .replace(/>/g,'＞')
     .replace(/\|/g,'｜');
-  return safeStr;
 }
+
+/**
+ * HTMLアンエスケープ
+ *
+ * @param {String} str 変換したい文字列
+ */
+var unEscapeHTML = function (str) {
+    return str
+            .replace(/(&lt;)/g, '<')
+            .replace(/(&gt;)/g, '>')
+            .replace(/(&quot;)/g, '"')
+            .replace(/(&#39;)/g, "'")
+            .replace(/(&amp;)/g, '&');
+};

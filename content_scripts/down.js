@@ -13,7 +13,7 @@ function getInfo(){
   var title = info.getElementsByTagName('h1');
   var username = info.getElementsByTagName('a');
 
-  if(links[0].href,indexOf("_Source") != -1){
+  if(links[0].href.indexOf("_Source") != -1){
     browser.runtime.sendMessage({
       source_url: links[0].href,
       title: convertSafeFileName(title[0].innerHTML),

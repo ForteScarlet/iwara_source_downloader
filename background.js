@@ -18,8 +18,10 @@ chrome.runtime.onMessage.addListener(
       if (typeof settings.filename !== "undefined") {
         if(settings.filename.indexOf("type1") != -1){
           filename = request.username + ' - ' + request.title + '.mp4';
-        } else {
+        } else if(settings.filename.indexOf("type2") != -1) {
           filename = '['+request.username+'] ' + request.title + '.mp4';
+        } else {
+          filename = request.title + '.mp4';
         }
       }
 

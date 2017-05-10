@@ -11,13 +11,14 @@ function getInfo(){
   var links = document.getElementById("download-options").getElementsByTagName('a');
   var info = document.getElementsByClassName('node-info')[0];
   var title = info.getElementsByTagName('h1');
-  var username = info.getElementsByTagName('a');
+  var username = info.getElementsByTagName('img');
+  username = username[0].title.replace("ユーザー ","").replace(" の写真","");
 
   if(links[0].href.indexOf("_Source") != -1){
     browser.runtime.sendMessage({
       source_url: links[0].href,
       title: convertSafeFileName(title[0].innerHTML),
-      username: convertSafeFileName(username[1].innerHTML)
+      username: convertSafeFileName(username)
     });
   }
 }
@@ -50,9 +51,9 @@ function convertSafeFileName(titleOrUsername){
  */
 var unEscapeHTML = function (str) {
     return str
-            .replace(/(&lt;)/g, '<')
-            .replace(/(&gt;)/g, '>')
-            .replace(/(&quot;)/g, '"')
-            .replace(/(&#39;)/g, "'")
-            .replace(/(&amp;)/g, '&');
+      .replace(/(&lt;)/g, '<')
+      .replace(/(&gt;)/g, '>')
+      .replace(/(&quot;)/g, '"')
+      .replace(/(&#39;)/g, "'")
+      .replace(/(&amp;)/g, '&');
 };

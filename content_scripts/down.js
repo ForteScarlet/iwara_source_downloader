@@ -12,7 +12,16 @@ function getInfo(){
   var info = document.getElementsByClassName('node-info')[0];
   var title = info.getElementsByTagName('h1');
   var username = info.getElementsByTagName('img');
-  username = username[0].title.replace("ユーザー ","").replace(" の写真","");
+  var html_lang = document.getElementsByTagName('html')[0].lang;
+  if(html_lang === 'ja') {
+    username = username[0].title.replace("ユーザー ","").replace(" の写真","");
+  } else if(html_lang === 'en') {
+    username = username[0].title.replace(/(&#39;)/, "'").replace("'s picture","");
+  } else if(html_lang === 'zh-hans') {
+    username = username[0].title.replace("的头像", "");
+  } else {
+    username = username[0].title.replace("Bild des Benutzers ", "");
+  }
 
   if(links[0].href.indexOf("_Source") != -1){
     browser.runtime.sendMessage({

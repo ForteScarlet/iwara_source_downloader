@@ -46,6 +46,7 @@ function convertSafeFileName(titleOrUsername){
     .replace(/\\/g,'￥')
     .replace(/\//g,'／')
     .replace(/:/g,'：')
+    .replace(/\*/g,'＊')
     .replace(/\?/g,'？')
     .replace(/"/g,'”')
     .replace(/</g,'＜')

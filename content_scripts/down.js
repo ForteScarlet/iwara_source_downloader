@@ -22,12 +22,17 @@ function getInfo(){
   } else {
     username = username[0].title.replace("Bild des Benutzers ", "");
   }
+  var posted_date = info.textContent.match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2})/);
+  if(posted_date !== null){
+    posted_date = posted_date[0].replace(/-/g, "").replace(/:/g, "").replace(" ","");
+  }
 
   if(links[0].href.indexOf("_Source") != -1){
     browser.runtime.sendMessage({
       source_url: links[0].href,
       title: convertSafeFileName(title[0].innerHTML),
-      username: convertSafeFileName(username)
+      username: convertSafeFileName(username),
+      posted_date: posted_date
     });
   }
 }

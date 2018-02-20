@@ -44,7 +44,7 @@ chrome.runtime.onMessage.addListener(getInfo);
 
 /*
 使用できない文字を全角に置き換え
-¥　/　:　*　?　"　<　>　|
+¥　/　:　*　?　"　<　>　| tab
 */
 function convertSafeFileName(titleOrUsername){
   return unEscapeHTML(titleOrUsername)
@@ -56,7 +56,8 @@ function convertSafeFileName(titleOrUsername){
     .replace(/"/g,'”')
     .replace(/</g,'＜')
     .replace(/>/g,'＞')
-    .replace(/\|/g,'｜');
+    .replace(/\|/g,'｜')
+    .replace(/\t/g, '　');
 }
 
 /**

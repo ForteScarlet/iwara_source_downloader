@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="options.css"/>
+  </head>
+
+  <body>
+
+    <section class="save-options">
+      <div class="title" >保存時のファイル名の形式を指定</div>
+
+      <label><input type="radio" id="type1" name="filename"/>username - title</label>
+      <label><input type="radio" id="type2" name="filename"/>[username] title</label>
+      <label><input type="radio" id="type3" name="filename"/>title</label>
+
+      <br />
+
+      <div class="title" >保存時のファイル名の末尾に投稿日時を追加する</div>
+      <label><input type="checkbox" id="posted_date" name="posted_date"/></label>
+
+    </section>
+
+    <input type="button" value="設定を保存" id="save-button"/>
+
+    <script src="options.js"></script>
+  </body>
+
+</html>

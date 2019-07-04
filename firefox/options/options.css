@@ -1,0 +1,24 @@
+body {
+  width: 25em;
+  font-family: "Open Sans Light", sans-serif;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+#save-button {
+  margin: 1em 1.3em 1em 0;
+}
+
+label {
+  display: block;
+  padding: 0.2em 0;
+}
+
+label:hover {
+  background-color: #EAEFF2;
+}
+
+.title {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}

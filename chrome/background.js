@@ -89,4 +89,13 @@
       .replace(/(&#39;)/g, "'")
       .replace(/(&amp;)/g, '&');
   };
+
+  /**
+   * アップデート時にメッセージを表示
+   */
+  chrome.runtime.onInstalled.addListener((OnInstalledReason) => {
+    if (OnInstalledReason.reason === "update") {
+      alert("Iwara Source Downloaderはversion2.0.0にアップデートされました。保存時のファイル名設定が変わったので確認をお願いします。\n------\nPlease check filename setting.");
+    }
+  });
 }

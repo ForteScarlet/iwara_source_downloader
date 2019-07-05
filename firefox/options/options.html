@@ -2,29 +2,74 @@
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="options.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="options.css" />
   </head>
 
   <body>
-
     <section class="save-options">
-      <div class="title" >保存時のファイル名の形式を指定</div>
+      <div class="title">設定</div>
 
-      <label><input type="radio" id="type1" name="filename"/>username - title</label>
-      <label><input type="radio" id="type2" name="filename"/>[username] title</label>
-      <label><input type="radio" id="type3" name="filename"/>title</label>
+      <div>
+        <h1>ファイル名の設定</h1>
+        <p>保存時のファイル名を設定します</p>
+        <p>下記要素一覧表の要素が使えます</p>
+        <p>ex: ?username? - ?title? → username - title </p>
+        <p>ex: [?username?] ?title? → [username] title </p>
+        <p>ex: ?title? → title</p>
+        <p>ex: ?title?_?year??month??day??hour??minute? → title_201901012020</p>
+        <input type="text" id="filename_definition" value="">
 
-      <br />
+        <input type="button" value="設定を保存" id="save-button" />
+        <output id="status"></output>
 
-      <div class="title" >保存時のファイル名の末尾に投稿日時を追加する</div>
-      <label><input type="checkbox" id="posted_date" name="posted_date"/></label>
+        <h2>要素一覧表</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>要素</th>
+              <th>説明</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>?title?</td>
+              <td>動画のタイトル</td>
+            </tr>
+            <tr>
+              <td>?username?</td>
+              <td>動画を投稿したユーザーの名前</td>
+            </tr>
+            <tr>
+              <td>?year?</td>
+              <td>アップロードされた年（西暦）</td>
+            </tr>
+            <tr>
+              <td>?month?</td>
+              <td>アップロードされた月（01~12）</td>
+            </tr>
+            <tr>
+              <td>?day?</td>
+              <td>アップロードされた日（01~31）</td>
+            </tr>
+            <tr>
+              <td>?hour?</td>
+              <td>アップロードされた時間（時間：00~23）</td>
+            </tr>
+            <tr>
+              <td>?minute?</td>
+              <td>アップロードされた時間（分：00~59）</td>
+            </tr>
+            <tr>
+              <td>?video-id?</td>
+              <td>Iwara.tv上の動画ID</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
     </section>
 
-    <input type="button" value="設定を保存" id="save-button"/>
-
     <script src="options.js"></script>
   </body>
-
 </html>

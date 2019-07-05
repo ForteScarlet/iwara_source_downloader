@@ -1,13 +1,9 @@
 'use strict';
 {
-  /*
-  動画の情報を取得してbackgroundへ投げる
-  取得する情報：
-    ・SourceのURL
-    ・タイトル
-    ・アップロードしたユーザーの名前
-  */
-  let getInfo = () => {
+  /**
+   * 動画の情報を取得してbackgroundへ投げる
+   */
+  let getInfo = (request, sender, sendResponse) => {
     let button = document.getElementById("download-button");
     button.click();
     let links = document.getElementById("download-options").getElementsByTagName('a');
@@ -25,59 +21,31 @@
       username = username[0].title.replace("Bild des Benutzers ", "");
     }
     let posted_date = info.textContent.match(/(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2})/);
-    if(posted_date !== null){
-      posted_date = posted_date[0].replace(/-/g, "").replace(/:/g, "").replace(" ","");
-    }
+    let year = posted_date[1];
+    let month = posted_date[2];
+    let day = posted_date[3];
+    let hour = posted_date[4];
+    let minute = posted_date[5];
+
+    let video_id = new URL(request.current_url).pathname.split("/").pop();
 
     if(links[0].href.indexOf("_Source") != -1){
       chrome.runtime.sendMessage({
         source_url: links[0].href,
-        title: convertSafeFileName(title[0].innerHTML),
-        username: convertSafeFileName(username),
-        posted_date: posted_date
+        title: title[0].innerText,
+        username: username,
+        year: year,
+        month: month,
+        day: day,
+        hour: hour,
+        minute: minute,
+        video_id: video_id
       });
     }
   }
 
-  /*
-  backgroundからのメッセージを受信したらgetInfoを実行
-  */
-  chrome.runtime.onMessage.addListener(getInfo);
-
-  /*
-  使用できない文字を全角に置き換え
-  ¥　/　:　*　?　"　<　>　| tab
-  chromeのみ
-  半角チルダを全角チルダへ変換
-  半角ピリオドを全角ピリオドへ変換
-  */
-  let convertSafeFileName = (titleOrUsername) => {
-    return unEscapeHTML(titleOrUsername)
-      .replace(/\\/g,'￥')
-      .replace(/\//g,'／')
-      .replace(/:/g,'：')
-      .replace(/\*/g,'＊')
-      .replace(/\?/g,'？')
-      .replace(/"/g,'”')
-      .replace(/</g,'＜')
-      .replace(/>/g,'＞')
-      .replace(/\|/g,'｜')
-      .replace(/\t/g, '　')
-      .replace(/~/g,'～')
-      .replace(/\./g,'．');
-  }
-
   /**
-   * HTMLアンエスケープ
-   *
-   * @param {String} str 変換したい文字列
+   * backgroundからのメッセージを受信したらgetInfoを実行
    */
-  let unEscapeHTML = (str) => {
-    return str
-      .replace(/(&lt;)/g, '<')
-      .replace(/(&gt;)/g, '>')
-      .replace(/(&quot;)/g, '"')
-      .replace(/(&#39;)/g, "'")
-      .replace(/(&amp;)/g, '&');
-  };
+  chrome.runtime.onMessage.addListener(getInfo);
 }

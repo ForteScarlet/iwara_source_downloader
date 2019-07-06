@@ -116,8 +116,8 @@
   /**
    * アップデート時にメッセージを表示
    */
-  chrome.runtime.onInstalled.addListener((OnInstalledReason) => {
-    if (OnInstalledReason.reason === "update") {
+  chrome.runtime.onInstalled.addListener((details) => {
+    if (details.reason === "update" && details.previousVersion === "1.3.2") {
       alert("Iwara Source Downloaderはversion2.0.0にアップデートされました。保存時のファイル名設定が変わったので確認をお願いします。\n------\nPlease check filename setting.");
     }
   });

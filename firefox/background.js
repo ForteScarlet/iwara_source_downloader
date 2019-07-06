@@ -113,9 +113,8 @@
   /**
    * アップデート時にメッセージを表示
    */
-  chrome.runtime.onInstalled.addListener((OnInstalledReason) => {
-    console.info(Notification.permission );
-    if (OnInstalledReason.reason === "update") {
+  chrome.runtime.onInstalled.addListener((details) => {
+    if (details.reason === "update" && details.previousVersion === "1.3.2") {
       browser.runtime.openOptionsPage();
     }
   });

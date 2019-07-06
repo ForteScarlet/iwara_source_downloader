@@ -10,6 +10,7 @@
     let info = document.getElementsByClassName('node-info')[0];
     let title = info.getElementsByTagName('h1');
     let username = info.getElementsByTagName('img');
+    let like_view = info.getElementsByClassName('node-views')[0].innerHTML.replace(/\s+/g, "").replace(",","").match(/\d+/g);
     let html_lang = document.getElementsByTagName('html')[0].lang;
     if(html_lang === 'ja') {
       username = username[0].title.replace("ユーザー ","").replace(" の写真","");
@@ -26,6 +27,8 @@
     let day = posted_date[3];
     let hour = posted_date[4];
     let minute = posted_date[5];
+    let like = like_view[0];
+    let view = like_view[1];
 
     let video_id = new URL(request.current_url).pathname.split("/").pop();
 
@@ -39,6 +42,8 @@
         day: day,
         hour: hour,
         minute: minute,
+        like: like,
+        view: view,
         video_id: video_id
       });
     }

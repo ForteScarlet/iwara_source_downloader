@@ -11,6 +11,7 @@
     chrome.storage.local.get({
       filename_definition: '?username? - ?title?'
     },(settings)=>{
+      let saved_dates = getDate(new Date());
       let filename = settings.filename_definition
         .replace(/\?title\?/g, info.title)
         .replace(/\?username\?/g, info.username)
@@ -19,6 +20,13 @@
         .replace(/\?day\?/g, info.day)
         .replace(/\?hour\?/g, info.hour)
         .replace(/\?minute\?/g, info.minute)
+        .replace(/\?like\?/g, info.like)
+        .replace(/\?view\?/g, info.view)
+        .replace(/\?saved-year\?/g, saved_dates.year)
+        .replace(/\?saved-month\?/g, saved_dates.month)
+        .replace(/\?saved-day\?/g, saved_dates.day)
+        .replace(/\?saved-hour\?/g, saved_dates.hour)
+        .replace(/\?saved-minute\?/g, saved_dates.minute)
         .replace(/\?video-id\?/g, info.video_id)
       filename = convertSafeFileName(filename)
       filename += '.mp4';
@@ -85,6 +93,21 @@
       .replace(/(&quot;)/g, '"')
       .replace(/(&#39;)/g, "'")
       .replace(/(&amp;)/g, '&');
+  };
+
+  /**
+   * ゼロパディングした日時を取得
+   *
+   * @param {Date} d 日付
+   */
+  let getDate = (d) => {
+    return {
+      'year': d.getFullYear().toString().padStart(4, '0'),
+      'month': (d.getMonth()+1).toString().padStart(2, '0'),
+      'day': d.getDate().toString().padStart(2, '0'),
+      'hour': d.getHours().toString().padStart(2, '0'),
+      'minute': d.getMinutes().toString().padStart(2, '0'),
+    }
   };
 
   /**

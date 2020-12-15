@@ -21,6 +21,8 @@ The file name when saving can be set freely by combining the following.
 - saved-hour: time when saved (hours)
 - saved-minute: time when saved (minutes)
 
+If you are logged in to Iwara.tv, you can also press the Like button at the same time as downloading.
+
 # URL
 
 - chrome

@@ -3,9 +3,11 @@ browser.storage.localにアドオンの設定を保存
 */
 function storeSettings() {
 
+  let auto_like = document.getElementById("auto_like");
   let filename_definition = document.getElementById("filename_definition");
 
   chrome.storage.local.set({
+    auto_like: auto_like.checked,
     filename_definition: filename_definition.value
   }, updateStatus);
 
@@ -16,6 +18,8 @@ function storeSettings() {
 ローカルストレージに設定がないときは空
 */
 function updateUI(restoredSettings) {
+  document.getElementById('auto_like').checked = restoredSettings.auto_like;
+
   let filename_definition = document.getElementById("filename_definition");
 
   if (typeof restoredSettings.filename_definition !== "undefined") {

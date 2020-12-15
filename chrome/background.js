@@ -45,6 +45,8 @@
   */
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     executeDownload(request);
+    sendResponse({});
+    return true;
   });
 
   /*

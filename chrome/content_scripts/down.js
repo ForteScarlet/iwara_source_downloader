@@ -32,6 +32,17 @@
 
     let video_id = new URL(request.current_url).pathname.split("/").pop();
 
+    chrome.storage.local.get({
+      auto_like: false
+    },(settings)=>{
+      if(settings.auto_like){
+        let like_button = document.getElementsByClassName("flag-link-toggle")[0];
+        if(typeof like_button !== "undefined" && !(like_button.textContent.indexOf("Unlike") > -1)){
+          like_button.click();
+        }
+      }
+    });
+
     if(links[0].href.indexOf("_Source") != -1){
       chrome.runtime.sendMessage({
         source_url: links[0].href,

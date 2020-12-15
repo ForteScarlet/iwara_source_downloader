@@ -21,6 +21,8 @@ Iwara.tvの動画をSourceのクオリティでダウンロードし、さまざ
 - saved-hour: 保存時点の時間（時）
 - saved-minute: 保存時点の時間（分）
 
+Iwara.tvにログインしている状態であれば、ダウンロードと同時にLikeボタンを押すこともできます。
+
 # URL
 
 - chrome

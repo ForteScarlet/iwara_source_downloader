@@ -3,6 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <title>Iwara Source Downloader</title>
     <link rel="stylesheet" href="options.css" />
   </head>
 
@@ -11,10 +12,33 @@
       <div class="title">設定</div>
 
       <div>
-        <label for="auto_like">ダウンロードと同時にLikeボタンを押す</label>
+        <h2>auto like</h2>
         <input type="checkbox" id="auto_like">
+        <label for="auto_like">ダウンロードと同時にLikeボタンを押す</label>
 
-        <h1>ファイル名の設定</h1>
+        <h2>ダウンロード方式の選択</h2>
+        <div class="radios">
+          <label>
+            <input type="radio" id="download_mode1" name="download_mode" value="1">モード1
+          </label>
+          <label>
+            <input type="radio" id="download_mode2" name="download_mode" value="2">モード2
+          </label>
+          <label>
+            <input type="radio" id="download_mode3" name="download_mode" value="3">モード3
+          </label>
+          <label>
+            <input type="radio" id="download_mode4" name="download_mode" value="4">モード4
+          </label>
+        </div>
+        <p>どれを選んでもダウンロードされるファイルは同じであり、通常はモード1から変更する必要はありません</p>
+        <p>モード2やモード3は他のアドオンと競合してファイル名が変更されなくなった場合に使用してください</p>
+        <p><strong>モード1</strong>: 従来通りの方法です</p>
+        <p><strong>モード2</strong>: 他のダウンロード系アドオンとの競合を回避しますが、競合しているアドオンがエラーメッセージを出すようになります</p>
+        <p><strong>モード3</strong>: 他のダウンロード系アドオンとの競合を回避し、モード2で発生するエラーも出ませんが、動作が安定しない場合があります</p>
+        <p><strong>モード4</strong>: iwaraのAPIからダウンロード</p>
+
+        <h2>ファイル名の設定</h2>
         <p>保存時のファイル名を設定します</p>
         <p>下記書式一覧表の書式が使えます</p>
         <p>ex: ?username? - ?title? → username - title </p>
@@ -23,10 +47,11 @@
         <p>ex: ?title?_?year??month??day??hour??minute? → title_201901012020</p>
         <input type="text" id="filename_definition" value="">
 
+        <h2>保存</h2>
         <input type="button" value="設定を保存" id="save-button" />
         <output id="status"></output>
 
-        <h2>書式一覧表</h2>
+        <h3>書式一覧表</h3>
         <table>
           <thead>
             <tr>

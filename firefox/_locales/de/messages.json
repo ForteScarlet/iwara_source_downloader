@@ -1,0 +1,107 @@
+{
+  "option_title": {
+    "message": "Einstellungen"
+  },
+  "autolike_description": {
+    "message": "Drücken Sie den Like-Button gleichzeitig mit dem Download"
+  },
+  "select_mode": {
+    "message": "Downloadmethode auswählen"
+  },
+  "mode1": {
+    "message": "Modus1"
+  },
+  "mode2": {
+    "message": "Modus2"
+  },
+  "mode3": {
+    "message": "Modus3"
+  },
+  "mode_description1": {
+    "message": "Egal welche Sie wählen, die heruntergeladene Datei ist dieselbe und normalerweise müssen Sie nicht von Modus1 wechseln"
+  },
+  "mode_description2": {
+    "message": "Verwenden Sie Modus2 oder Modus3, wenn ein Konflikt mit anderen Add-Ons besteht und der Dateiname nicht mehr umbenannt wird"
+  },
+  "mode1_description": {
+    "message": "Machen Sie keine seltsamen Dinge auf die übliche Weise"
+  },
+  "mode2_description": {
+    "message": "Vermeiden Sie Konflikte mit anderen Download-Add-Ons, aber widersprüchliche Add-Ons geben jetzt Fehlermeldungen aus."
+  },
+  "mode3_description": {
+    "message": "Vermeiden Sie Konflikte mit anderen Download-Add-Ons, im Modus2 tritt kein Fehler auf, aber der Betrieb ist möglicherweise nicht stabil."
+  },
+  "filename_setting": {
+    "message": "Dateinameneinstellung"
+  },
+  "filename_setting_description1": {
+    "message": "Dateinamen beim Speichern festlegen"
+  },
+  "filename_setting_description2": {
+    "message": "Sie können das Format der folgenden Formatliste verwenden"
+  },
+  "save": {
+    "message": "Speichern"
+  },
+  "format_list": {
+    "message": "Liste formatieren"
+  },
+  "format_list_header1": {
+    "message": "formatieren"
+  },
+  "format_list_header2": {
+    "message": "Beschreibung"
+  },
+  "format_title": {
+    "message": "Videotitel"
+  },
+  "format_username": {
+    "message": "Name des Benutzers, der das Video gepostet hat"
+  },
+  "format_year": {
+    "message": "Hochgeladenes Jahr (AD)"
+  },
+  "format_month": {
+    "message": "Hochgeladener Monat (01~12)"
+  },
+  "format_day": {
+    "message": "Upload-Datum (01~31)"
+  },
+  "format_hour": {
+    "message": "Upload-Zeit (Zeit: 00~23)"
+  },
+  "format_minute": {
+    "message": "Hochgeladene Zeit (Minuten: 00~59)"
+  },
+  "format_video_id": {
+    "message": "Video-ID auf Iwara.tv"
+  },
+  "format_like": {
+    "message": "Anzahl der Likes beim Speichern auf Iwara.tv"
+  },
+  "format_view": {
+    "message": "Anzahl der Aufrufe zur Zeit auf Iwara.tv"
+  },
+  "format_saved_year": {
+    "message": "Jahr zum Zeitpunkt der Speicherung (AD)"
+  },
+  "format_saved_month": {
+    "message": "Monat zum Zeitpunkt des Speicherns (01~12)"
+  },
+  "format_saved_day": {
+    "message": "Datum zum Zeitpunkt des Speicherns (01~31)"
+  },
+  "format_saved_hour": {
+    "message": "Zeit zum Zeitpunkt des Speicherns (Zeit: 00~23)"
+  },
+  "format_saved_minute": {
+    "message": "Zeit zum Zeitpunkt des Speicherns (Minuten: 00~59)"
+  },
+  "save_message":{
+    "message":"Gerettet"
+  },
+  "save_button":{
+    "message":"speichern"
+  }
+}

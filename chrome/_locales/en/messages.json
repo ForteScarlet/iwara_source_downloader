@@ -1,0 +1,107 @@
+{
+  "option_title": {
+    "message": "settings"
+  },
+  "autolike_description": {
+    "message": "Press the Like button at the same time as downloading"
+  },
+  "select_mode": {
+    "message": "Select download method"
+  },
+  "mode1": {
+    "message": "mode1"
+  },
+  "mode2": {
+    "message": "mode2"
+  },
+  "mode3": {
+    "message": "mode3"
+  },
+  "mode_description1": {
+    "message": "No matter which one you choose, the downloaded file is the same and usually you don't need to change from mode1"
+  },
+  "mode_description2": {
+    "message": "Use mode2 or mode3 if there is a conflict with other add-ons and the filename is no longer renamed"
+  },
+  "mode1_description": {
+    "message": "It doesn't do anything strange in the traditional way"
+  },
+  "mode2_description": {
+    "message": "Avoid conflicts with other download add-ons, but conflicting add-ons will now give error messages."
+  },
+  "mode3_description": {
+    "message": "It avoids conflicts with other download add-ons and does not generate the error that occurs in mode2, but the operation may not be stable."
+  },
+  "filename_setting": {
+    "message": "filename setting"
+  },
+  "filename_setting_description1": {
+    "message": "Set the file name when saving"
+  },
+  "filename_setting_description2": {
+    "message": "You can use the format of the following format list"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "format_list": {
+    "message": "format list"
+  },
+  "format_list_header1": {
+    "message": "format"
+  },
+  "format_list_header2": {
+    "message": "description"
+  },
+  "format_title": {
+    "message": "Video title"
+  },
+  "format_username": {
+    "message": "Name of the user who posted the video"
+  },
+  "format_year": {
+    "message": "Uploaded year (AD)"
+  },
+  "format_month": {
+    "message": "Uploaded month (01~12)"
+  },
+  "format_day": {
+    "message": "Upload date (01~31)"
+  },
+  "format_hour": {
+    "message": "Upload time (time:00~23)"
+  },
+  "format_minute": {
+    "message": "Uploaded time (minutes:00~59)"
+  },
+  "format_video_id": {
+    "message": "Video ID on Iwara.tv"
+  },
+  "format_like": {
+    "message": "Number of Likes at save on Iwara.tv"
+  },
+  "format_view": {
+    "message": "Number of views at save time on Iwara.tv"
+  },
+  "format_saved_year": {
+    "message": "Year at the time of saving (AD)"
+  },
+  "format_saved_month": {
+    "message": "Month at the time of saving (01~12)"
+  },
+  "format_saved_day": {
+    "message": "Date at the time of saving (01~31)"
+  },
+  "format_saved_hour": {
+    "message": "Time at the time of saving (time:00~23)"
+  },
+  "format_saved_minute": {
+    "message": "Time at the time of saving (minutes:00~59)"
+  },
+  "save_message":{
+    "message":"Saved"
+  },
+  "save_button":{
+    "message":"Save"
+  }
+}

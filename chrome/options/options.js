@@ -43,6 +43,11 @@ function updateUI(restoredSettings) {
   } else {
     filename_definition.value = '?username? - ?title?';
   }
+
+  document.querySelectorAll('[data-locale]').forEach(elem => {
+    elem.innerText = chrome.i18n.getMessage(elem.dataset.locale)
+  })
+  document.getElementById('save-button').value = chrome.i18n.getMessage("save_button")
 }
 
 /**
@@ -53,7 +58,7 @@ const gettingStoredSettings = chrome.storage.local.get(updateUI);
 
 let updateStatus = () => {
   var status = document.getElementById('status');
-  status.textContent = '保存しました';
+  status.textContent = chrome.i18n.getMessage("save_message");
 
   setTimeout(function() {
     status.textContent = '';

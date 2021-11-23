@@ -3,97 +3,100 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <title>Iwara Source Downloader</title>
     <link rel="stylesheet" href="options.css" />
   </head>
 
   <body>
     <section class="save-options">
-      <div class="title">設定</div>
+      <div class="title" data-locale="option_title">設定</div>
 
       <div>
-        <label for="auto_like">ダウンロードと同時にLikeボタンを押す</label>
+        <h2>auto like</h2>
         <input type="checkbox" id="auto_like">
+        <label for="auto_like" data-locale="autolike_description">ダウンロードと同時にLikeボタンを押す</label>
 
-        <h1>ファイル名の設定</h1>
-        <p>保存時のファイル名を設定します</p>
-        <p>下記書式一覧表の書式が使えます</p>
+        <h2 data-locale="filename_setting">ファイル名の設定</h2>
+        <p data-locale="filename_setting_description1">保存時のファイル名を設定します</p>
+        <p data-locale="filename_setting_description2">下記書式一覧表の書式が使えます</p>
         <p>ex: ?username? - ?title? → username - title </p>
         <p>ex: [?username?] ?title? → [username] title </p>
         <p>ex: ?title? → title</p>
         <p>ex: ?title?_?year??month??day??hour??minute? → title_201901012020</p>
         <input type="text" id="filename_definition" value="">
 
+        <h2 data-locale="save">保存</h2>
         <input type="button" value="設定を保存" id="save-button" />
         <output id="status"></output>
 
-        <h2>書式一覧表</h2>
+        <h3 data-locale="format_list">書式一覧表</h3>
         <table>
           <thead>
             <tr>
-              <th>書式</th>
-              <th>説明</th>
+              <th data-locale="format_list_header1">書式</th>
+              <th data-locale="format_list_header2">説明</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>?title?</td>
-              <td>動画のタイトル</td>
+              <td data-locale="format_title">動画のタイトル</td>
             </tr>
             <tr>
               <td>?username?</td>
-              <td>動画を投稿したユーザーの名前</td>
+              <td data-locale="format_username">動画を投稿したユーザーの名前</td>
             </tr>
             <tr>
               <td>?year?</td>
-              <td>アップロードされた年（西暦）</td>
+              <td data-locale="format_year">アップロードされた年（西暦）</td>
             </tr>
             <tr>
               <td>?month?</td>
-              <td>アップロードされた月（01~12）</td>
+              <td data-locale="format_month">アップロードされた月（01~12）</td>
             </tr>
             <tr>
               <td>?day?</td>
-              <td>アップロードされた日（01~31）</td>
+              <td data-locale="format_day">アップロードされた日（01~31）</td>
             </tr>
             <tr>
               <td>?hour?</td>
-              <td>アップロードされた時間（時間：00~23）</td>
+              <td data-locale="format_hour">アップロードされた時間（時間：00~23）</td>
             </tr>
             <tr>
               <td>?minute?</td>
-              <td>アップロードされた時間（分：00~59）</td>
+              <td data-locale="format_minute">アップロードされた時間（分：00~59）</td>
             </tr>
             <tr>
               <td>?video-id?</td>
-              <td>Iwara.tv上の動画ID</td>
+              <td data-locale="format_video_id">Iwara.tv上の動画ID</td>
             </tr>
             <tr>
               <td>?like?</td>
-              <td>Iwara.tv上の保存時点のLike数</td>
+              <td data-locale="format_like">Iwara.tv上の保存時点のLike数</td>
             </tr>
             <tr>
               <td>?view?</td>
-              <td>Iwara.tv上の保存時点のView数</td>
+              <td data-locale="format_view">Iwara.tv上の保存時点のView数</td>
             </tr>
             <tr>
               <td>?saved-year?</td>
-              <td>保存時点の年（西暦）</td>
+              <td data-locale="format_saved_year">保存時点の年（西暦）</td>
             </tr>
             <tr>
               <td>?saved-month?</td>
-              <td>保存時点の月（01~12）</td>
+              <td data-locale="format_saved_month">保存時点の月（01~12）</td>
             </tr>
             <tr>
               <td>?saved-day?</td>
-              <td>保存時点の日（01~31）</td>
+              <td data-locale="format_saved_day">保存時点の日（01~31）</td>
             </tr>
             <tr>
               <td>?saved-hour?</td>
-              <td>保存時点の時間（時間：00~23）</td>
+              <td data-locale="format_saved_hour">保存時点の時間（時間：00~23）</td>
             </tr>
             <tr>
               <td>?saved-minute?</td>
-              <td>保存時点の時間（分：00~59）</td>
+              <td data-locale="format_saved_minute">保存時点の時間（分：00~59）</td>
             </tr>
           </tbody>
         </table>

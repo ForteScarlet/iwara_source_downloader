@@ -27,6 +27,11 @@ function updateUI(restoredSettings) {
   } else {
     filename_definition.value = '?username? - ?title?';
   }
+
+  document.querySelectorAll('[data-locale]').forEach(elem => {
+    elem.innerText = chrome.i18n.getMessage(elem.dataset.locale)
+  })
+  document.getElementById('save-button').value = chrome.i18n.getMessage("save_button")
 }
 
 /**

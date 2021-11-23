@@ -2,7 +2,8 @@
 
   "manifest_version": 2,
   "name": "Iwara Source Downloader",
-  "version": "2.1.0",
+  "version": "2.1.1",
+  "default_locale": "ja",
 
   "description": "Iwara Source Downloader",
 

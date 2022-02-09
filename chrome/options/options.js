@@ -5,9 +5,19 @@ function storeSettings() {
 
   let auto_like = document.getElementById("auto_like");
   let filename_definition = document.getElementById("filename_definition");
+  let download_modes = document.getElementsByName("download_mode");
+  let download_mode = "1";
+
+  for (let i = 0; i < download_modes.length; i++) {
+    if (download_modes[i].checked) {
+      download_mode = download_modes[i].value;
+      break;
+    }
+  }
 
   chrome.storage.local.set({
     auto_like: auto_like.checked,
+    download_mode: download_mode,
     filename_definition: filename_definition.value
   }, updateStatus);
 
@@ -20,6 +30,12 @@ function storeSettings() {
 function updateUI(restoredSettings) {
   document.getElementById('auto_like').checked = restoredSettings.auto_like;
 
+  if (typeof restoredSettings.download_mode !== "undefined") {
+    document.getElementById('download_mode'+restoredSettings.download_mode).checked = true
+  }else{
+    document.getElementById('download_mode1').checked = true
+  }
+
   let filename_definition = document.getElementById("filename_definition");
 
   if (typeof restoredSettings.filename_definition !== "undefined") {
@@ -27,6 +43,11 @@ function updateUI(restoredSettings) {
   } else {
     filename_definition.value = '?username? - ?title?';
   }
+
+  document.querySelectorAll('[data-locale]').forEach(elem => {
+    elem.innerText = chrome.i18n.getMessage(elem.dataset.locale)
+  })
+  document.getElementById('save-button').value = chrome.i18n.getMessage("save_button")
 }
 
 /**
@@ -37,7 +58,7 @@ const gettingStoredSettings = chrome.storage.local.get(updateUI);
 
 let updateStatus = () => {
   var status = document.getElementById('status');
-  status.textContent = '保存しました';
+  status.textContent = chrome.i18n.getMessage("save_message");
 
   setTimeout(function() {
     status.textContent = '';

@@ -1,0 +1,107 @@
+{
+  "option_title":{
+    "message":"设置"
+  },
+  "autolike_description":{
+    "message": "下载的同时按赞"
+  },
+  "select_mode": {
+    "message": "选择下载方式"
+  },
+  "mode1":{
+    "message":"模式1"
+  },
+  "mode2":{
+    "message":"模式2"
+  },
+  "mode3":{
+    "message":"模式3"
+  },
+  "mode_description1":{
+    "message": "无论选择哪一个，下载的文件都是一样的，通常不需要从模式1改变"
+  },
+  "mode_description2":{
+    "message": "如果与其他加载项发生冲突并且文件名不再重命名，请使用模式2 或模式3"
+  },
+  "mode1_description":{
+    "message": "不要用平常的方式做奇怪的事情"
+  },
+  "mode2_description":{
+    "message": "避免与其他下载加载项冲突，但冲突加载项现在会给出错误消息"
+  },
+  "mode3_description":{
+    "message": "避免与其他下载插件冲突，模式2没有报错，但运行可能不稳定"
+  },
+  "filename_setting":{
+    "message": "文件名设置"
+  },
+  "filename_setting_description1":{
+    "message": "保存时设置文件名"
+  },
+  "filename_setting_description2":{
+    "message": "您可以使用以下格式列表的格式"
+  },
+  "save": {
+    "message": "保存"
+  },
+  "format_list":{
+    "message": "格式列表"
+  },
+  "format_list_header1":{
+    "message":"格式"
+  },
+  "format_list_header2":{
+    "message":"说明"
+  },
+  "format_title":{
+    "message": "视频标题"
+  },
+  "format_username":{
+    "message": "发布视频的用户名"
+  },
+  "format_year":{
+    "message": "上传年份 (AD)"
+  },
+  "format_month":{
+    "message": "上传月份 (01~12)"
+  },
+  "format_day":{
+    "message": "上传日期 (01~31)"
+  },
+  "format_hour":{
+    "message": "上传时间（时间:00~23）"
+  },
+  "format_minute":{
+    "message": "上传时间（分钟:00~59）"
+  },
+  "format_video_id":{
+    "message": "Iwara.tv 上的视频 ID"
+  },
+  "format_like":{
+    "message": "Iwara.tv 存档时点赞数"
+  },
+  "format_view":{
+    "message": "Iwara.tv 保存时的观看次数"
+  },
+  "format_saved_year":{
+    "message": "保存时的年份 (AD)"
+  },
+  "format_saved_month":{
+    "message": "保存时的月份 (01~12)"
+  },
+  "format_saved_day":{
+    "message": "保存时的日期 (01~31)"
+  },
+  "format_saved_hour":{
+    "message": "保存时的时间（时间:00~23）"
+  },
+  "format_saved_minute":{
+    "message": "保存时的时间（分钟:00~59）"
+  },
+  "save_message":{
+    "message":"已保存"
+  },
+  "save_button":{
+    "message":"保存设置"
+  }
+}

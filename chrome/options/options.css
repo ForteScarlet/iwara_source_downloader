@@ -33,7 +33,7 @@ label:hover {
   margin-bottom: 0.5em;
 }
 
-h1 {
+h2 {
   position: relative;
   width: 40em;
   font-size: 1em;
@@ -41,7 +41,7 @@ h1 {
   margin-top: 20px;
 }
 
-h1:after {
+h2:after {
   content: "";
   display: block;
   width: 100%;
@@ -50,7 +50,7 @@ h1:after {
   background: linear-gradient(to right, rgb(2, 74, 135), transparent);
 }
 
-h2 {
+h3 {
   font-size: 1em;
   padding: 0.25em 0.5em;
   color: #494949;
@@ -83,4 +83,55 @@ table td {
 	vertical-align: top;
 	padding: 10px;
 	border: 1px solid #dddddd;
+}
+
+.radios {
+  display: flex;
+}
+
+.radios label {
+  margin: 0.2em;
+  padding: 0.2em;
+  border: 1px solid #dddddd;
+}
+
+#save-button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.675rem - 1px) calc(1.25rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 25ms;
+  vertical-align: baseline;
+  width: auto;
+}
+
+#save-button:hover,
+#save-button:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 2px;
+}
+
+#save-button:hover {
+  transform: translateY(-1px);
+}
+
+#save-button:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 2px;
+  transform: translateY(0);
 }

@@ -1,5 +1,7 @@
 'use strict';
 {
+  let override_filename = "";
+
   /*
   アイコンがクリックされたときにdown.jsへメッセージを送信する
   */
@@ -7,9 +9,32 @@
     chrome.tabs.sendMessage(tab.id, {"current_url": tab.url});
   });
 
+  chrome.storage.local.get({
+    download_mode: '1'
+  },(settings)=>{
+    if(settings.download_mode == "3"){
+      let overrideFilename = details => {
+        for (let i = 0; i < details.responseHeaders.length; i++) {
+          if (details.responseHeaders[i].name == "content-disposition" && override_filename) {
+            details.responseHeaders[i].value = 'attachment; filename="'+override_filename+'"';
+            override_filename = "";
+            break;
+          }
+        }
+        return { responseHeaders: details.responseHeaders };
+      }
+      chrome.webRequest.onHeadersReceived.addListener(
+        overrideFilename,
+        { urls: ["*://*.iwara.tv/file.php*"] },
+        ["blocking", "responseHeaders"]
+      )
+    }
+  })
+
   let executeDownload = (info) => {
     chrome.storage.local.get({
-      filename_definition: '?username? - ?title?'
+      filename_definition: '?username? - ?title?',
+      download_mode: '1'
     },(settings)=>{
       let saved_dates = getDate(new Date());
       let filename = settings.filename_definition
@@ -30,6 +55,16 @@
         .replace(/\?video-id\?/g, info.video_id)
       filename = convertSafeFileName(filename)
       filename += '.mp4';
+
+      if(settings.download_mode == "2"){
+        let listener = (downloadItem, callback) => {
+          callback({filename: filename})
+          chrome.downloads.onDeterminingFilename.removeListener(listener)
+        }
+        chrome.downloads.onDeterminingFilename.addListener(listener)
+      }else if(settings.download_mode == "3"){
+        override_filename = filename;
+      }
 
       chrome.downloads.download({
         url : info.source_url,

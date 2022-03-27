@@ -1,8 +1,8 @@
 {
 
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Iwara Source Downloader",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "default_locale": "ja",
 
   "description": "Iwara Source Downloader",
@@ -14,19 +14,16 @@
   "permissions": [
     "tabs",
     "downloads",
-    "storage",
-    "webRequest",
-    "webRequestBlocking",
-    "*://*.iwara.tv/file.php*"
+    "storage"
   ],
 
-  "page_action": {
+  "action": {
     "default_icon": "icons/icon-48.png",
     "default_title": "Iwara Source Downloader"
   },
 
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js"
   },
 
   "content_scripts": [

@@ -24,15 +24,16 @@
           <label>
             <input type="radio" id="download_mode2" name="download_mode" value="2"><span data-locale="mode2">モード2</span>
           </label>
-          <label>
-            <input type="radio" id="download_mode3" name="download_mode" value="3"><span data-locale="mode3">モード3</span>
+          <label style="opacity: 30%;">
+            <input type="radio" id="download_mode3" name="download_mode" value="3" disabled="disabled"><span data-locale="mode3">モード3</span>
           </label>
         </div>
-        <p data-locale="mode_description1">どれを選んでもダウンロードされるファイルは同じであり、通常はモード1から変更する必要はありません</p>
-        <p data-locale="mode_description2">モード2やモード3は他のアドオンと競合してファイル名が変更されなくなった場合に使用してください</p>
-        <p><strong data-locale="mode1">モード1</strong>: <span data-locale="mode1_description">従来通りの方法で妙なことはしません</span></p>
-        <p><strong data-locale="mode2">モード2</strong>: <span data-locale="mode2_description">他のダウンロード系アドオンとの競合を回避しますが、競合しているアドオンがエラーメッセージを出すようになります</span></p>
-        <p><strong data-locale="mode3">モード3</strong>: <span data-locale="mode3_description">他のダウンロード系アドオンとの競合を回避し、モード2で発生するエラーも出ませんが、動作が安定しない場合があります</span></p>
+        <p data-locale="mode_description1" style="margin:1rem 0px 0px 0px;">どれを選んでもダウンロードされるファイルは同じであり、通常はモード1から変更する必要はありません</p>
+        <p data-locale="mode_description2" style="margin:0;">モード2やモード3は他のアドオンと競合してファイル名が変更されなくなった場合に使用してください</p>
+        <p data-locale="mode_description3" style="margin:0;">モード3はChromeの仕様により現在使用できません</p>
+        <p style="margin:1rem 0px 0px 0px;"><strong data-locale="mode1">モード1</strong>: <span data-locale="mode1_description">従来通りの方法で妙なことはしません</span></p>
+        <p style="margin:0;"><strong data-locale="mode2">モード2</strong>: <span data-locale="mode2_description">他のダウンロード系アドオンとの競合を回避しますが、競合しているアドオンがエラーメッセージを出すようになります</span></p>
+        <p style="margin:0; opacity: 30%;"><s><strong data-locale="mode3">モード3</strong>: <span data-locale="mode3_description">他のダウンロード系アドオンとの競合を回避し、モード2で発生するエラーも出ませんが、動作が安定しない場合があります</span></s></p>
 
         <h2 data-locale="filename_setting">ファイル名の設定</h2>
         <p data-locale="filename_setting_description1">保存時のファイル名を設定します</p>

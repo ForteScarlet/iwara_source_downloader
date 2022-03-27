@@ -23,6 +23,9 @@
   "mode_description2": {
     "message": "Verwenden Sie Modus2 oder Modus3, wenn ein Konflikt mit anderen Add-Ons besteht und der Dateiname nicht mehr umbenannt wird"
   },
+  "mode_description3":{
+    "message": "Modus3 ist derzeit aufgrund von Chrome-Spezifikationen nicht verfügbar"
+  },
   "mode1_description": {
     "message": "Machen Sie keine seltsamen Dinge auf die übliche Weise"
   },

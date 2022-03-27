@@ -21,7 +21,7 @@
     "message": "Egal welche Sie wählen, die heruntergeladene Datei ist dieselbe und normalerweise müssen Sie nicht von Modus1 wechseln"
   },
   "mode_description2": {
-    "message": "Verwenden Sie Modus2 oder Modus3, wenn ein Konflikt mit anderen Add-Ons besteht und der Dateiname nicht mehr umbenannt wird"
+    "message": "Verwenden Sie Modus2 oder Modus3, wenn ein Konflikt mit anderen Addons besteht und der Dateiname oder Zielordner nicht mehr geändert wird"
   },
   "mode_description3":{
     "message": "Modus3 ist derzeit aufgrund von Chrome-Spezifikationen nicht verfügbar"
@@ -36,13 +36,10 @@
     "message": "Vermeiden Sie Konflikte mit anderen Download-Add-Ons, im Modus2 tritt kein Fehler auf, aber der Betrieb ist möglicherweise nicht stabil."
   },
   "filename_setting": {
-    "message": "Dateinameneinstellung"
+    "message": "Dateinameneinstellung (kann nach Format eingestellt werden)"
   },
   "filename_setting_description1": {
     "message": "Dateinamen beim Speichern festlegen"
-  },
-  "filename_setting_description2": {
-    "message": "Sie können das Format der folgenden Formatliste verwenden"
   },
   "save": {
     "message": "Speichern"
@@ -106,5 +103,23 @@
   },
   "save_button":{
     "message":"speichern"
+  },
+  "save_location":{
+    "message":"Festlegen des Speicherzielordners (kann nach Format festgelegt werden)"
+  },
+  "savelocation_description1":{
+    "message":"Sie können den Pfad nach dem in Chrome festgelegten Download-Ordner festlegen"
+  },
+  "savelocation_description2":{
+    "message":"Der in Chrome festgelegte Download-Ordner ist der Wert von „Speichern in“, der durch Öffnen von „chrome: // settings / downloads“ im Browser bestätigt werden kann."
+  },
+  "savelocation_description3":{
+    "message":"Wenn das „Speicherziel“ beispielsweise „P:\\iwara“ und der festgelegte Pfad „iwarasourcedownloader/?username?/“ ist, lautet der Speicherort „P:\\iwara\\iwarasourcedownloader\\?usernamae?\\Dateiname.mp4“"
+  },
+  "savelocation_description4":{
+    "message":"Verwenden Sie einen halbbreiten Schrägstrich „/“ als Trennzeichen zwischen Ordnern"
+  },
+  "savelocation_description5":{
+    "message":"<strong>Rückwärtsreferenz „../“ und aktuelle Referenz „./“ können nicht verwendet werden</strong>"
   }
 }

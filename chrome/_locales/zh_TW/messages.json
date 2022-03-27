@@ -21,7 +21,7 @@
     "message": "無論選擇哪一個，下載的文件都是一樣的，通常不需要從模式1改變"
   },
   "mode_description2":{
-    "message": "如果與其他加載項發生衝突並且文件名不再重命名，請使用模式2 或模式3"
+    "message": "如果與另一個加載項發生衝突並且文件名或目標文件夾未更改，請使用模式2 或模式3"
   },
   "mode_description3":{
     "message": "由於 Chrome 規範，模式3 目前不可用"
@@ -36,13 +36,10 @@
     "message": "避免與其他下載插件衝突，模式2沒有報錯，但運行可能不穩定"
   },
   "filename_setting":{
-    "message": "文件名設置"
+    "message": "文件名設置（可按格式設置）"
   },
   "filename_setting_description1":{
     "message": "保存時設置文件名"
-  },
-  "filename_setting_description2":{
-    "message": "您可以使用以下格式列表的格式"
   },
   "save": {
     "message": "保存"
@@ -106,5 +103,23 @@
   },
   "save_button":{
     "message":"保存設置"
+  },
+  "save_location":{
+    "message":"設置保存目標文件夾（可按格式設置）"
+  },
+  "savelocation_description1":{
+    "message":"您可以在Chrome中設置下載文件夾後設置路徑"
+  },
+  "savelocation_description2":{
+    "message":"Chrome中設置的下載文件夾是“Save in”的值，可以通過在瀏覽器中打開“chrome://settings/downloads”來確認。"
+  },
+  "savelocation_description3":{
+    "message":"例如，如果“保存目的地”為“P:\\iwara”，設置路徑為“iwarasourcedownloader/?username?/”，則保存位置為“P:\\iwara\\iwarasourcedownloader\\?username?\\文件名.mp4”"
+  },
+  "savelocation_description4":{
+    "message":"使用半角斜線“/”作為文件夾之間的分隔符"
+  },
+  "savelocation_description5":{
+    "message":"<strong>不能使用後向引用“../”和當前引用“./”</strong>"
   }
 }

@@ -58,7 +58,7 @@ h3 {
   border-left: solid 5px #4096e6;
 }
 
-#filename_definition {
+#filename_definition, #save_location {
   width: 100%;
 }
 

@@ -56,7 +56,8 @@
   let executeDownload = (info) => {
     chrome.storage.local.get({
       filename_definition: '?username? - ?title?',
-      download_mode: '1'
+      download_mode: '1',
+      save_location: ''
     },(settings)=>{
       let saved_dates = getDate(new Date());
       let filename = settings.filename_definition
@@ -77,6 +78,35 @@
         .replace(/\?video-id\?/g, info.video_id)
       filename = convertSafeFileName(filename)
       filename += '.mp4';
+
+      if(settings.save_location.length != 0){
+        let save_location = settings.save_location
+          .replace(/\?title\?/g, info.title)
+          .replace(/\?username\?/g, info.username)
+          .replace(/\?year\?/g, info.year)
+          .replace(/\?month\?/g, info.month)
+          .replace(/\?day\?/g, info.day)
+          .replace(/\?hour\?/g, info.hour)
+          .replace(/\?minute\?/g, info.minute)
+          .replace(/\?like\?/g, info.like)
+          .replace(/\?view\?/g, info.view)
+          .replace(/\?saved-year\?/g, saved_dates.year)
+          .replace(/\?saved-month\?/g, saved_dates.month)
+          .replace(/\?saved-day\?/g, saved_dates.day)
+          .replace(/\?saved-hour\?/g, saved_dates.hour)
+          .replace(/\?saved-minute\?/g, saved_dates.minute)
+          .replace(/\?video-id\?/g, info.video_id)
+          .replace(/\//g, '__delimiter__')
+        save_location = convertSafeFileName(save_location)
+        save_location = save_location.replace(/__delimiter__/g, "/")
+        if(save_location.slice(0,1) == "/"){
+          save_location = save_location.slice(1)
+        }
+        if(save_location.slice(-1) != "/"){
+          save_location += "/"
+        }
+        filename = save_location + filename
+      }
 
       if(settings.download_mode == "2"){
         let listener = (downloadItem, callback) => {

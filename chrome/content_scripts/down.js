@@ -58,6 +58,9 @@
         video_id: video_id
       });
     }
+
+    sendResponse({});
+    return true;
   }
 
   /**

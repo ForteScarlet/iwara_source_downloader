@@ -23,6 +23,9 @@
   "mode_description2": {
     "message": "Use mode2 or mode3 if there is a conflict with other add-ons and the filename is no longer renamed"
   },
+  "mode_description3":{
+    "message": "mode3 is currently unavailable due to Chrome specifications"
+  },
   "mode1_description": {
     "message": "It doesn't do anything strange in the traditional way"
   },

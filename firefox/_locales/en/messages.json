@@ -21,7 +21,10 @@
     "message": "No matter which one you choose, the downloaded file is the same and usually you don't need to change from mode1"
   },
   "mode_description2": {
-    "message": "Use mode2 or mode3 if there is a conflict with other add-ons and the filename is no longer renamed"
+    "message": "Use mode2 or mode3 when there is a conflict with other addons and the file name or destination folder is no longer changed"
+  },
+  "mode_description3":{
+    "message": "mode3 is currently unavailable due to Chrome specifications"
   },
   "mode1_description": {
     "message": "It doesn't do anything strange in the traditional way"
@@ -33,13 +36,10 @@
     "message": "It avoids conflicts with other download add-ons and does not generate the error that occurs in mode2, but the operation may not be stable."
   },
   "filename_setting": {
-    "message": "filename setting"
+    "message": "Filename setting (can be set by format)"
   },
   "filename_setting_description1": {
     "message": "Set the file name when saving"
-  },
-  "filename_setting_description2": {
-    "message": "You can use the format of the following format list"
   },
   "save": {
     "message": "Save"
@@ -103,5 +103,26 @@
   },
   "save_button":{
     "message":"Save"
+  },
+  "save_location":{
+    "message":"Setting the save destination folder (can be set by formatting)"
+  },
+  "savelocation_description1":{
+    "message":"You can set the path after the download folder set in Firefox"
+  },
+  "savelocation_description2":{
+    "message":"The download folder set in Firefox is the value of \"Save to the following folder (V)\" that can be confirmed by opening \"about:preferences#general\" in the browser."
+  },
+  "savelocation_description3":{
+    "message":"For example, if the \"Save to the following folder (V)\" is \"P:\\iwara\" and the set path is \"iwarasourcedownloader/?username?/\", The save location is \"P:\\iwara\\iwarasourcedownloader\\?username?\\filename.mp4\""
+  },
+  "savelocation_description4":{
+    "message":"Use half-width slash \"/\" as the delimiter between folders"
+  },
+  "savelocation_description5":{
+    "message":"<strong>Backward reference \"../\" and current reference \"./\" cannot be used</strong>"
+  },
+  "autodown_description":{
+    "message":"When the save destination folder is set, download immediately without displaying the dialog to select the save location of the file."
   }
 }

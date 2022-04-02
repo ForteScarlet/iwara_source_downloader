@@ -5,6 +5,7 @@ function storeSettings() {
 
   let auto_like = document.getElementById("auto_like");
   let filename_definition = document.getElementById("filename_definition");
+  let save_location = document.getElementById("save_location");
   let download_modes = document.getElementsByName("download_mode");
   let download_mode = "1";
 
@@ -18,7 +19,8 @@ function storeSettings() {
   chrome.storage.local.set({
     auto_like: auto_like.checked,
     download_mode: download_mode,
-    filename_definition: filename_definition.value
+    filename_definition: filename_definition.value,
+    save_location: save_location.value
   }, updateStatus);
 
 }
@@ -44,8 +46,12 @@ function updateUI(restoredSettings) {
     filename_definition.value = '?username? - ?title?';
   }
 
+  if (typeof restoredSettings.save_location !== "undefined") {
+    save_location.value = restoredSettings.save_location;
+  }
+
   document.querySelectorAll('[data-locale]').forEach(elem => {
-    elem.innerText = chrome.i18n.getMessage(elem.dataset.locale)
+    elem.innerHTML = chrome.i18n.getMessage(elem.dataset.locale)
   })
   document.getElementById('save-button').value = chrome.i18n.getMessage("save_button")
 }

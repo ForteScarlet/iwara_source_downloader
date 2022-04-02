@@ -21,7 +21,10 @@
     "message":"どれを選んでもダウンロードされるファイルは同じであり、通常はモード1から変更する必要はありません"
   },
   "mode_description2":{
-    "message":"モード2やモード3は他のアドオンと競合してファイル名が変更されなくなった場合に使用してください"
+    "message":"モード2やモード3は他のアドオンと競合してファイル名や保存先フォルダが変更されなくなった場合に使用してください"
+  },
+  "mode_description3":{
+    "message": "モード3はChromeの仕様により現在使用できません"
   },
   "mode1_description":{
     "message":"従来通りの方法で妙なことはしません"
@@ -33,13 +36,10 @@
     "message":"他のダウンロード系アドオンとの競合を回避し、モード2で発生するエラーも出ませんが、動作が安定しない場合があります"
   },
   "filename_setting":{
-    "message":"ファイル名の設定"
+    "message":"ファイル名の設定（書式設定可）"
   },
   "filename_setting_description1":{
     "message":"保存時のファイル名を設定します"
-  },
-  "filename_setting_description2":{
-    "message":"下記書式一覧表の書式が使えます"
   },
   "save":{
     "message":"保存"
@@ -103,5 +103,23 @@
   },
   "save_button":{
     "message":"設定を保存"
+  },
+  "save_location":{
+    "message":"保存先フォルダの設定（書式設定可）"
+  },
+  "savelocation_description1":{
+    "message":"Chromeに設定されているダウンロードフォルダ<strong>以降のパス</strong>を設定できます"
+  },
+  "savelocation_description2":{
+    "message":"Chromeに設定されているダウンロードフォルダは、ブラウザで「chrome://settings/downloads」を開いて確認できる「保存先」の値です"
+  },
+  "savelocation_description3":{
+    "message":"例えば、「保存先」が「P:\\iwara」で、設定したパスが「iwarasourcedownloader/?username?/」の場合、保存される場所は「P:\\iwara\\iwarasourcedownloader\\?username?\\filename.mp4」になります"
+  },
+  "savelocation_description4":{
+    "message":"フォルダ間の区切り文字には半角スラッシュ「/」を使用してください"
+  },
+  "savelocation_description5":{
+    "message":"<strong>後方への参照「../」およびカレントの参照「./」は使用できません</strong>"
   }
 }

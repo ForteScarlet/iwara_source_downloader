@@ -1,12 +1,12 @@
 {
   "option_title":{
-    "message":"设置"
+    "message":"設置"
   },
   "autolike_description":{
-    "message": "下载的同时按赞"
+    "message": "下載的同時按贊"
   },
   "select_mode": {
-    "message": "选择下载方式"
+    "message": "選擇下載方式"
   },
   "mode1":{
     "message":"模式1"
@@ -18,28 +18,28 @@
     "message":"模式3"
   },
   "mode_description1":{
-    "message": "无论选择哪一个，下载的文件都是一样的，通常不需要从模式1改变"
+    "message": "無論選擇哪一個，下載的文件都是一樣的，通常不需要從模式1改變"
   },
   "mode_description2":{
-    "message": "如果与其他加载项发生冲突并且文件名不再重命名，请使用模式2 或模式3"
+    "message": "如果與另一個加載項發生衝突並且文件名或目標文件夾未更改，請使用模式2 或模式3"
+  },
+  "mode_description3":{
+    "message": "由於 Chrome 規範，模式3 目前不可用"
   },
   "mode1_description":{
     "message": "不要用平常的方式做奇怪的事情"
   },
   "mode2_description":{
-    "message": "避免与其他下载加载项冲突，但冲突加载项现在会给出错误消息"
+    "message": "避免與其他下載加載項衝突，但衝突加載項現在會給出錯誤消息"
   },
   "mode3_description":{
-    "message": "避免与其他下载插件冲突，模式2没有报错，但运行可能不稳定"
+    "message": "避免與其他下載插件衝突，模式2沒有報錯，但運行可能不穩定"
   },
   "filename_setting":{
-    "message": "文件名设置"
+    "message": "文件名設置（可按格式設置）"
   },
   "filename_setting_description1":{
-    "message": "保存时设置文件名"
-  },
-  "filename_setting_description2":{
-    "message": "您可以使用以下格式列表的格式"
+    "message": "保存時設置文件名"
   },
   "save": {
     "message": "保存"
@@ -51,57 +51,78 @@
     "message":"格式"
   },
   "format_list_header2":{
-    "message":"说明"
+    "message":"說明"
   },
   "format_title":{
-    "message": "视频标题"
+    "message": "視頻標題"
   },
   "format_username":{
-    "message": "发布视频的用户名"
+    "message": "發布視頻的用戶名"
   },
   "format_year":{
-    "message": "上传年份 (AD)"
+    "message": "上傳年份 (AD)"
   },
   "format_month":{
-    "message": "上传月份 (01~12)"
+    "message": "上傳月份 (01~12)"
   },
   "format_day":{
-    "message": "上传日期 (01~31)"
+    "message": "上傳日期 (01~31)"
   },
   "format_hour":{
-    "message": "上传时间（时间:00~23）"
+    "message": "上傳時間（時間:00~23）"
   },
   "format_minute":{
-    "message": "上传时间（分钟:00~59）"
+    "message": "上傳時間（分鐘:00~59）"
   },
   "format_video_id":{
-    "message": "Iwara.tv 上的视频 ID"
+    "message": "Iwara.tv 上的視頻 ID"
   },
   "format_like":{
-    "message": "Iwara.tv 存档时点赞数"
+    "message": "Iwara.tv 存檔時點贊數"
   },
   "format_view":{
-    "message": "Iwara.tv 保存时的观看次数"
+    "message": "Iwara.tv 保存時的觀看次數"
   },
   "format_saved_year":{
-    "message": "保存时的年份 (AD)"
+    "message": "保存時的年份 (AD)"
   },
   "format_saved_month":{
-    "message": "保存时的月份 (01~12)"
+    "message": "保存時的月份 (01~12)"
   },
   "format_saved_day":{
-    "message": "保存时的日期 (01~31)"
+    "message": "保存時的日期 (01~31)"
   },
   "format_saved_hour":{
-    "message": "保存时的时间（时间:00~23）"
+    "message": "保存時的時間（時間:00~23）"
   },
   "format_saved_minute":{
-    "message": "保存时的时间（分钟:00~59）"
+    "message": "保存時的時間（分鐘:00~59）"
   },
   "save_message":{
     "message":"已保存"
   },
   "save_button":{
-    "message":"保存设置"
+    "message":"保存設置"
+  },
+  "save_location":{
+    "message":"設置保存目標文件夾（可按格式設置）"
+  },
+  "savelocation_description1":{
+    "message":"您可以在Firefox中設置下載文件夾後設置路徑"
+  },
+  "savelocation_description2":{
+    "message":"Firefox中設置的下載文件夾是“保存到以下文件夾（V）”的值，可以通過在瀏覽器中打開“about:preferences#general”來確認。"
+  },
+  "savelocation_description3":{
+    "message":"例如，如果“保存到以下文件夾（V）”為“P:\\iwara”，設置路徑為“iwarasourcedownloader/?username?/”，則保存位置為“P:\\iwara\\iwarasourcedownloader\\?username?\\文件名.mp4”"
+  },
+  "savelocation_description4":{
+    "message":"使用半角斜線“/”作為文件夾之間的分隔符"
+  },
+  "savelocation_description5":{
+    "message":"<strong>不能使用後向引用“../”和當前引用“./”</strong>"
+  },
+  "autodown_description":{
+    "message":"設置保存目標文件夾後，立即下載而不顯示選擇文件保存位置的對話框"
   }
 }

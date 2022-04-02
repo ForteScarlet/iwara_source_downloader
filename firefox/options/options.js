@@ -4,11 +4,15 @@ browser.storage.localにアドオンの設定を保存
 function storeSettings() {
 
   let auto_like = document.getElementById("auto_like");
+  let auto_down = document.getElementById("auto_down");
   let filename_definition = document.getElementById("filename_definition");
+  let save_location = document.getElementById("save_location");
 
   chrome.storage.local.set({
     auto_like: auto_like.checked,
-    filename_definition: filename_definition.value
+    auto_down: auto_down.checked,
+    filename_definition: filename_definition.value,
+    save_location: save_location.value
   }, updateStatus);
 
 }
@@ -19,6 +23,7 @@ function storeSettings() {
 */
 function updateUI(restoredSettings) {
   document.getElementById('auto_like').checked = restoredSettings.auto_like;
+  document.getElementById('auto_down').checked = restoredSettings.auto_down;
 
   let filename_definition = document.getElementById("filename_definition");
 
@@ -28,8 +33,12 @@ function updateUI(restoredSettings) {
     filename_definition.value = '?username? - ?title?';
   }
 
+  if (typeof restoredSettings.save_location !== "undefined") {
+    save_location.value = restoredSettings.save_location;
+  }
+
   document.querySelectorAll('[data-locale]').forEach(elem => {
-    elem.innerText = chrome.i18n.getMessage(elem.dataset.locale)
+    elem.innerHTML = chrome.i18n.getMessage(elem.dataset.locale)
   })
   document.getElementById('save-button').value = chrome.i18n.getMessage("save_button")
 }
@@ -42,7 +51,7 @@ const gettingStoredSettings = chrome.storage.local.get(updateUI);
 
 let updateStatus = () => {
   var status = document.getElementById('status');
-  status.textContent = '保存しました';
+  status.textContent = chrome.i18n.getMessage("save_message");
 
   setTimeout(function() {
     status.textContent = '';

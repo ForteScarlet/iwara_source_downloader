@@ -16,14 +16,24 @@
         <input type="checkbox" id="auto_like">
         <label for="auto_like" data-locale="autolike_description">ダウンロードと同時にLikeボタンを押す</label>
 
-        <h2 data-locale="filename_setting">ファイル名の設定</h2>
+        <h2 data-locale="filename_setting">ファイル名の設定（書式設定可）</h2>
         <p data-locale="filename_setting_description1">保存時のファイル名を設定します</p>
-        <p data-locale="filename_setting_description2">下記書式一覧表の書式が使えます</p>
         <p>ex: ?username? - ?title? → username - title </p>
         <p>ex: [?username?] ?title? → [username] title </p>
         <p>ex: ?title? → title</p>
         <p>ex: ?title?_?year??month??day??hour??minute? → title_201901012020</p>
         <input type="text" id="filename_definition" value="">
+
+        <h2 data-locale="save_location">保存先フォルダの設定（書式設定可）</h2>
+        <p data-locale="savelocation_description1" style="margin:1rem 0px 0px 0px;">Firefoxに設定されているダウンロードフォルダ<strong>以降のパス</strong>を設定できます</p>
+        <p data-locale="savelocation_description2" style="margin:0;">Firefoxに設定されているダウンロードフォルダは、ブラウザで「about:preferences#general」を開いて確認できる「次のフォルダーに保存する(V)」の値です</p>
+        <p data-locale="savelocation_description3" style="margin:1rem 0px 0px 0px;">例えば、「次のフォルダーに保存する(V)」が「P:\iwara」で、設定したパスが「iwarasourcedownloader/?username?/」の場合、保存される場所は「P:\iwara\iwarasourcedownloader\?username?\filename.mp4」になります</p>
+        <p data-locale="savelocation_description4" style="margin:1rem 0px 0px 0px;">フォルダ間の区切り文字には半角スラッシュ「/」を使用してください</p>
+        <p data-locale="savelocation_description5" style="margin:0px 0px 1rem 0px;"><strong>後方への参照「../」およびカレントの参照「./」は使用できません</strong></p>
+        <input type="text" id="save_location" value="" placeholder="iwarasourcedownloader/?username?/">
+        <p></p>
+        <input type="checkbox" id="auto_down">
+        <label for="auto_down" data-locale="autodown_description">保存先フォルダが設定されているとき、ファイルの保存場所を選択するダイアログを表示しないですぐダウンロードする</label>
 
         <h2 data-locale="save">保存</h2>
         <input type="button" value="設定を保存" id="save-button" />

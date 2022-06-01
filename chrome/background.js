@@ -114,24 +114,6 @@
           chrome.downloads.onDeterminingFilename.removeListener(listener)
         }
         chrome.downloads.onDeterminingFilename.addListener(listener)
-      }else if(settings.download_mode == "3"){
-        // chrome.declarativeNetRequest.updateDynamicRules({
-        //   addRules:[
-        //     {
-        //       "id": 1,
-        //       "priority": 1,
-        //       "action": {
-        //         "type": "modifyHeaders",
-        //         "responseHeaders": [
-        //           // { "header": "content-disposition", "operation": "set", "value": 'attachment; filename="'+filename+'"' }
-        //           { "header": "content-disposition", "operation": "remove" }
-        //         ]
-        //       },
-        //       "condition": {"urlFilter": "*://*.iwara.tv/file.php*", "resourceTypes": ["main_frame", "sub_frame", "xmlhttprequest", "media", "other"]}
-        //     }
-        //   ],
-        //   removeRuleIds: [1]
-        // })
       }
 
       chrome.downloads.download({
